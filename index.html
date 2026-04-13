@@ -10,42 +10,53 @@
 body { line-height: 1.6; scroll-behavior: smooth; color: var(--text); }
 
 /* Navigation */
-nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+nav { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
 .logo-area { display: flex; align-items: center; }
-.logo-img { height: 90px; width: auto; transition: 0.3s; } /* Increased Logo Size */
-.slogan-box { margin-left: 20px; border-left: 2px solid #eee; padding-left: 20px; }
-.slogan-text { color: var(--primary); font-style: italic; font-size: 18px; font-weight: 600; display: block; } /* Increased Slogan Size */
+
+/* ADJUSTED LOGO SIZE HERE */
+.logo-img { height: 120px; width: auto; transition: 0.3s; }
+
+.slogan-box { margin-left: 25px; border-left: 3px solid #eee; padding-left: 25px; }
+
+/* ADJUSTED SLOGAN SIZE HERE */
+.slogan-text { color: var(--primary); font-style: italic; font-size: 22px; font-weight: 700; display: block; line-height: 1.2; }
 
 nav ul { list-style: none; display: flex; }
-nav ul li { margin-left: 25px; }
-nav ul li a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 16px; }
+nav ul li { margin-left: 30px; }
+nav ul li a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 18px; transition: 0.3s; }
+nav ul li a:hover { color: var(--primary); }
 
-/* Hero */
-.hero { position: relative; height: 80vh; display: flex; align-items: center; justify-content: center; overflow: hidden; color: white; text-align: center; }
+/* Hero Section */
+.hero { position: relative; height: 85vh; display: flex; align-items: center; justify-content: center; overflow: hidden; color: white; text-align: center; }
 .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover; }
 .hero-overlay { background: rgba(0,0,0,0.45); position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+.hero h1 { font-size: 4rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); font-weight: 800; }
 
 /* Products Section */
-section { padding: 80px 10%; text-align: center; }
-.grid { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
-.card { background: white; border-radius: 12px; overflow: hidden; width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-bottom: 5px solid var(--primary); }
-.product-img { width: 100%; height: 250px; object-fit: cover; background: #eee; }
-.card-content { padding: 25px; }
-.card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.5rem; }
+section { padding: 100px 10%; text-align: center; }
+.grid { display: flex; justify-content: center; gap: 50px; margin-top: 50px; flex-wrap: wrap; }
+.card { background: white; border-radius: 15px; overflow: hidden; width: 450px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-bottom: 6px solid var(--primary); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.product-img { width: 100%; height: 300px; object-fit: cover; background: #f0f0f0; }
+.card-content { padding: 30px; }
+.card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.8rem; }
 
-.cta-btn { background: var(--gold); color: white; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; }
+.cta-btn { background: var(--gold); color: white; padding: 18px 45px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin-top: 30px; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); }
 
-footer { background: #1a1a1a; color: white; padding: 50px 10%; text-align: center; }
+/* Contact Section */
+#contact { background: #f8faf8; }
+.contact-info { font-size: 1.4rem; margin-top: 30px; line-height: 2; }
+
+footer { background: #111; color: white; padding: 60px 10%; text-align: center; border-top: 4px solid var(--primary); }
 </style>
 </head>
 <body>
 
 <nav>
 <div class="logo-area">
-<img src="logo pnp.png" alt="Logo" class="logo-img">
+<img src="logo pnp.png" alt="Dhanya Global Exports Logo" class="logo-img">
 <div class="slogan-box">
-<span class="slogan-text">Bridging the Borders with Freshness</span>
+<span class="slogan-text">Bridging the Borders<br>with Freshness</span>
 </div>
 </div>
 <ul>
@@ -61,34 +72,34 @@ footer { background: #1a1a1a; color: white; padding: 50px 10%; text-align: cente
 </video>
 <div class="hero-overlay">
 <h1>Directly Sourced. Globally Delivered.</h1>
-<p style="font-size: 1.3rem; margin-top: 15px;">Premium Sona Masoori Rice and Yellow Maize from Northern Telangana.</p>
+<p style="font-size: 1.6rem; margin-top: 20px; font-weight: 300;">Premium Sona Masoori Rice and Yellow Maize from Northern Telangana.</p>
 <a href="#contact" class="cta-btn">Request a Quote</a>
 </div>
 </div>
 
 <section id="products">
-<h2 style="font-size: 2.5rem; color: var(--primary);">Our Premium Produce</h2>
+<h2 style="font-size: 3rem; color: var(--primary); margin-bottom: 10px;">Our Premium Produce</h2>
 <div class="grid">
 <div class="card">
 <img src="rice.jpg" alt="Sona Masoori Rice" class="product-img">
 <div class="card-content">
 <h3>Sona Masoori Rice</h3>
-<p>Aromatic, lightweight, and aged medium-grain rice. Sourced directly from our contracted farms.</p>
+<p>Aromatic, lightweight, and aged medium-grain rice. Sourced directly from our contracted farms in the fertile lands of Telangana.</p>
 </div>
 </div>
 <div class="card">
 <img src="maize.jpg" alt="Yellow Maize" class="product-img">
 <div class="card-content">
 <h3>Yellow Maize</h3>
-<p>High-quality dried maize with optimal moisture levels for global animal feed and industrial use.</p>
+<p>High-energy feed quality maize. We ensure meticulous drying processes to maintain optimal moisture levels for global export.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section id="contact" style="background: #f4f7f4;">
-<h2 style="color: var(--primary); margin-bottom: 20px;">Global Headquarters</h2>
-<div style="font-size: 1.2rem;">
+<section id="contact">
+<h2 style="font-size: 3rem; color: var(--primary);">Global Headquarters</h2>
+<div class="contact-info">
 <p><strong>Email:</strong> info@dhanyaglobalexports.com</p>
 <p><strong>Address:</strong> Bandalingapur Village, Metpally Mandal,</p>
 <p>Telangana, India - 505325</p>
